@@ -4,6 +4,19 @@ Windisk is a tiny library to retrieve disk info such as serial number, product i
 
 # Usage
 
+windisk.GetDiskInfo() returns DeviceInfo struct which is;
+
+```go
+type DeviceInfo struct {
+	SerialNumber     string
+	IsRemovableMedia bool
+	VendorID         string
+	ProductID        string
+	ProductRevision  string
+	BusType          bustype.BusType
+}
+```
+
 ```go
 package main
 
